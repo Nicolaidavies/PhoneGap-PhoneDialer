@@ -10,12 +10,12 @@ module.exports = {
      */
     dial: function(phnum, errorCallback, successCallback) {
         if (phnum == null) errorCallback("empty");
-        if (platformId == 'ios' || platformId == 'android') {
+        if (platformId == 'android') {
             exec(
-                successCallback, 
-                errorCallback, 
-                "PhoneDialer", 
-                "dial", 
+                successCallback,
+                errorCallback,
+                "PhoneDialer",
+                "dial",
                 [phnum]
             );
         } else {
